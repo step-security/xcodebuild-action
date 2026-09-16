@@ -23,7 +23,7 @@ on:
       script:
         description: "Script to build/bundle the action"
         required: false
-        default: "ncc build lib/main.js -o dist --license license.txt --target es2024"
+        default: "npm run pack"
 
   pull_request:
     types: [ opened, synchronize, labeled ]
@@ -44,4 +44,4 @@ jobs:
       base_branch: ${{ inputs.base_branch || 'main' }}
       mode: ${{ github.event_name == 'pull_request' && 'verify' || inputs.mode || 'cherry-pick' }}
       node_version: ${{ inputs.node_version || '24' }}
-      script: ${{ inputs.script || 'ncc build lib/main.js -o dist --license license.txt --target es2024' }}
+      script: ${{ inputs.script || 'npm run pack' }}
