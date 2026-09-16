@@ -18,7 +18,7 @@ on:
       script:
         description: "Script to build/bundle the action"
         required: false
-        default: "ncc build lib/main.js -o dist --license license.txt --target es2024"
+        default: "npm run pack"
   schedule:
     - cron: "0 0 * * 1"
 
@@ -29,7 +29,7 @@ jobs:
       force: ${{ inputs.force || false }}
       base_branch: ${{ inputs.base_branch || 'main' }}
       node_version: ${{ inputs.node_version || '24' }}
-      script: ${{ inputs.script || 'ncc build lib/main.js -o dist --license license.txt --target es2024' }}
+      script: ${{ inputs.script || 'npm run pack' }}
 
 permissions:
   contents: write
