@@ -1,0 +1,41 @@
+{
+  "name": "xcodebuild-action",
+  "version": "4.0.0",
+  "description": "A GitHub action that runs xcodebuild.",
+  "engines": {
+    "node": "^24"
+  },
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "pack": "rm -rf dist && ncc build lib/main.js -o dist --license license.txt --target es2024"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/step-security/xcodebuild-action.git"
+  },
+  "keywords": [
+    "Xcode",
+    "xcodebuild"
+  ],
+  "author": "step-security",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/step-security/xcodebuild-action/issues"
+  },
+  "homepage": "https://github.com/step-security/xcodebuild-action#readme",
+  "dependencies": {
+    "@actions/core": "^3.0.1",
+    "axios": "^1.20.0"
+  },
+  "devDependencies": {
+    "@tsconfig/node24": "^24.0.5",
+    "@types/node": "^24.13.4",
+    "@vercel/ncc": "^0.45.0",
+    "typescript": "^7.0.2"
+  }
+}
