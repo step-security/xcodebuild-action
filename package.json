@@ -30,7 +30,7 @@
   "homepage": "https://github.com/step-security/xcodebuild-action#readme",
   "dependencies": {
     "@actions/core": "^3.0.1",
-    "axios": "^1.20.0"
+    "axios": "^1.21.1"
   },
   "devDependencies": {
     "@tsconfig/node24": "^24.0.5",
