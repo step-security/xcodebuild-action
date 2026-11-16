@@ -33,7 +33,7 @@
     "axios": "^1.20.0"
   },
   "devDependencies": {
-    "@tsconfig/node24": "^24.0.5",
+    "@tsconfig/node24": "^24.0.6",
     "@types/node": "^24.13.4",
     "@vercel/ncc": "^0.45.0",
     "typescript": "^7.0.2"
